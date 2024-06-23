@@ -1,7 +1,9 @@
 import { useState } from "react";
 import GenderCheck from "./GenderCheck";
+// import RoleCheck from "./RoleCheck";
 import {Link} from 'react-router-dom';
 import useSignup from "../../hooks/useSignup";
+
 
 const SignUp = () => {
     const [inputs,setInputs] = useState({
@@ -9,7 +11,8 @@ const SignUp = () => {
       username:"",
       password:"",
       confirmPassword:"",
-      gender:""
+      gender:"",
+      role:"student"
     })
 
     const { loading, signup } = useSignup();
@@ -71,7 +74,9 @@ const SignUp = () => {
                     />
                   </div>
                   <div>
+                    
                   <GenderCheck onRadioChange={handleRadio} selectedGender={inputs.gender} />
+                  {/* <RoleCheck onRadioChange={handleRadio} selectedRole={inputs.role} /> */}
                     <Link to={"/login"}
                     className='text-sm hover:underline hover:text-blue-600 mt-4 inline-block ' >
                       Already have account?

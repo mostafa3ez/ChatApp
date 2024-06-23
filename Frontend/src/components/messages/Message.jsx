@@ -21,8 +21,8 @@ const Message = ({message}) => {
                         src={profilePic} />
                 </div>
             </div>
-            <div className={`chat-bubble text-white  ${bubbleBgColor}`}>{message.message}</div>
-            <div className='chat-footer opacity-50 text-xs flex gap-1 items-center pb-3'>
+            <div className={`chat-bubble text-white font-semibold ${bubbleBgColor}`}>{message.message}</div>
+            <div className='chat-footer opacity-50 text-black font-extrabold text-xs flex gap-1 items-center pb-3'>
                 {formattedTime}
             </div>
         </div>

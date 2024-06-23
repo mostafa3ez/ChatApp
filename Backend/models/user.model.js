@@ -21,10 +21,16 @@ const userSchema = new mongoose.Schema(
 			required: true,
 			enum: ["male", "female"],
 		},
+		role: {
+			type: String,
+			required:true,
+			enum:["admin","student"],
+		},
 		profilePic: {
 			type: String,
 			default: "",
 		},
+		
 		// createdAt, updatedAt => Member since <createdAt>
 	},
 	{ timestamps: true }
